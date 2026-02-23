@@ -1,0 +1,249 @@
+/* ======= Base ======= */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #545454;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #505050;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #3e3e3e;
+}
+
+/* ======= Resume Wrapper ======= */
+.resume-wrapper {
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+/* ======= Header ======= */
+.resume-header {
+    padding-bottom: 0;
+}
+
+.resume-name {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: #2d2d2d;
+}
+
+.resume-tagline {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #6c757d;
+}
+
+.resume-contact .list-unstyled li {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.resume-contact .list-unstyled li i {
+    color: #aab0b6;
+    width: 20px;
+    text-align: center;
+}
+
+.resume-contact .resume-link {
+    color: #6c757d;
+}
+
+.resume-contact .resume-link:hover {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+
+/* ======= Profile Image ======= */
+.resume-profile-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50% !important;
+}
+
+/* ======= Intro ======= */
+.resume-intro p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #545454;
+}
+
+/* ======= Section Headings ======= */
+.resume-section-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #2d2d2d;
+    position: relative;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+/* ======= Work Section ======= */
+.item-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin-bottom: 0;
+}
+
+.item-meta {
+    font-size: 0.8rem;
+    color: #999 !important;
+}
+
+.item-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.resume-list {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+}
+
+.resume-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* ======= Publications ======= */
+.resume-skills-list {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.resume-skills-list li {
+    margin-bottom: 0.1rem;
+}
+
+.resume-skills-list li em {
+    font-weight: 400;
+}
+
+.resume-skills-list p {
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* ======= Sidebar ======= */
+.resume-aside .resume-section-heading {
+    font-size: 0.95rem;
+}
+
+.resume-aside section {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.resume-aside section:last-child {
+    border-bottom: none;
+}
+
+.resume-degree {
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+.resume-degree-org {
+    font-size: 0.78rem;
+}
+
+.resume-degree-time {
+    font-size: 0.78rem;
+}
+
+.resume-awards-list li,
+.resume-lang-list li {
+    font-size: 0.88rem;
+}
+
+/* ======= Skills Bar ======= */
+.skill-bar-container {
+    margin-bottom: 0.8rem;
+}
+
+.skill-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.skill-bar {
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background: #545454;
+    border-radius: 3px;
+    transition: width 0.6s ease;
+}
+
+/* ======= Footer ======= */
+.resume-footer {
+    padding-top: 0.5rem;
+}
+
+.resume-social-list a {
+    color: #aab0b6;
+    transition: color 0.3s ease;
+}
+
+.resume-social-list a:hover {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+
+.footer {
+    font-size: 0.75rem;
+    color: #d4d4d4;
+}
+
+/* ======= HR ======= */
+hr {
+    border-top: 1px solid #e8e8e8;
+    opacity: 1;
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 767px) {
+    .resume-name {
+        font-size: 1.6rem;
+    }
+
+    .resume-wrapper {
+        padding: 1.5rem !important;
+    }
+
+    .resume-profile-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    .resume-aside {
+        border-top: 1px solid #e8e8e8;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+}
