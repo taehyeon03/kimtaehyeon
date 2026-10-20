@@ -10,8 +10,8 @@
 	<meta name="description" content="Portfolio of TaeHyeon Kim - Undergraduate in AI Engineering, Chosun University">
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<!-- Google Fonts (Roboto for English, Noto Sans KR for Korean) -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 	<!-- Bootstrap 5 CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,16 +24,29 @@
 </head>
 
 <body>
+	<!-- ====== Top bar: language switch + PDF ====== -->
+	<nav class="top-bar no-print" aria-label="Language and download">
+		<div class="top-bar-inner mx-auto">
+			<div class="lang-switch" role="group" aria-label="Language">
+				<button type="button" class="lang-btn" data-lang="ko">한국어</button>
+				<button type="button" class="lang-btn" data-lang="en">English</button>
+			</div>
+			<a class="pdf-btn" id="pdf-btn" href="assets/files/CV_TaeHyeon_Kim.pdf" download>
+				<i class="fas fa-file-arrow-down me-2"></i><span data-i18n="pdfButton">Download PDF</span>
+			</a>
+		</div>
+	</nav>
+
 	<div class="main-wrapper">
 		<div class="container px-3 px-lg-5">
-			<article class="resume-wrapper mx-auto p-5 mb-5 my-5 shadow-lg">
+			<article class="resume-wrapper mx-auto p-5 mb-5 mt-3 shadow-lg">
 
 				<!-- ====== Header ====== -->
 				<div class="resume-header">
 					<div class="row align-items-center">
 						<div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
-							<h2 class="resume-name mb-0 text-uppercase">TaeHyeon Kim</h2>
-							<div class="resume-tagline mb-3 mb-md-0">Undergraduate Researcher<br>Dept. of AI Engineering, Chosun University</div>
+							<h2 class="resume-name mb-0 text-uppercase" data-i18n="name">TaeHyeon Kim</h2>
+							<div class="resume-tagline mb-3 mb-md-0" data-i18n="tagline">Undergraduate Researcher<br>Dept. of AI Engineering, Chosun University</div>
 						</div>
 						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
 							<ul class="list-unstyled mb-0">
@@ -41,8 +54,8 @@
 								<li class="mb-2"><i class="fas fa-globe fa-fw fa-lg me-2"></i><a class="resume-link" href="https://scholar.google.com/citations?user=p8eoi3kAAAAJ&hl=ko" target="_blank">Google Scholar</a></li>
 								<li class="mb-2"><i class="fa-brands fa-github fa-fw fa-lg me-2"></i><a class="resume-link" href="https://github.com/taehyeon03" target="_blank">GitHub</a></li>
 								<li class="mb-2"><i class="fa-brands fa-linkedin fa-fw fa-lg me-2"></i><a class="resume-link" href="https://www.linkedin.com/in/taehyeon-kim-71b94a27a/" target="_blank">LinkedIn</a></li>
-								<li class="mb-2"><i class="fas fa-file-pdf fa-fw fa-lg me-2"></i><a class="resume-link" href="assets/files/CV_TaeHyeon_Kim.pdf" target="_blank">Download CV</a></li>
-								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>South Korea</li>
+								<li class="mb-2 no-print"><i class="fas fa-file-pdf fa-fw fa-lg me-2"></i><a class="resume-link" id="cv-link" href="assets/files/CV_TaeHyeon_Kim.pdf" target="_blank" data-i18n="downloadCV">Download CV</a></li>
+								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i><span data-i18n="location">South Korea</span></li>
 							</ul>
 						</div>
 					</div>
@@ -56,7 +69,7 @@
 							<img class="resume-profile-image mb-3 mb-md-0 me-md-5 ms-md-0 rounded mx-auto" src="assets/images/profile.jpg" alt="profile image">
 						</div>
 						<div class="col text-start">
-							<p class="mb-0">
+							<p class="mb-0" data-i18n="intro">
 								I am an undergraduate student in the Department of AI Engineering at <b>Chosun University</b>, South Korea. My research interests include <b>Artificial Intelligence</b>, <b>Computer Vision</b>, <b>Large Language Models</b>, and <b>Vision-Language-Action Models</b>.
 							</p>
 						</div>
@@ -71,16 +84,16 @@
 
 							<!-- Education -->
 							<section class="education-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Education</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="secEducation">Education</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0">Chosun University</h4>
-										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end">2022 – Present</div>
+										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0" data-i18n="eduSchool">Chosun University</h4>
+										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end" data-i18n="eduPeriod">2022 – Present</div>
 									</div>
 									<div class="item-content">
-										<p class="mb-1">B.Eng. in Artificial Intelligence Engineering &nbsp;·&nbsp; 3rd Year</p>
+										<p class="mb-1" data-i18n="eduDegree">B.Eng. in Artificial Intelligence Engineering &nbsp;·&nbsp; 3rd Year</p>
 										<ul class="resume-list">
-											<li>Relevant Coursework: Natural Language Processing, Deep Learning</li>
+											<li data-i18n="eduCoursework">Relevant Coursework: Natural Language Processing, Deep Learning</li>
 										</ul>
 									</div>
 								</div>
@@ -88,7 +101,7 @@
 
 							<!-- Publications -->
 							<section class="project-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Publications</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="secPublications">Publications</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
 										<h4 class="item-title col-12 mb-2 mb-md-0">2026</h4>
@@ -105,28 +118,28 @@
 
 							<!-- Awards -->
 							<section class="work-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Awards</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="secAwards">Awards</h3>
 
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0">Best Prize</h4>
-										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end">Chosun University | Jan. 2026</div>
+										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0" data-i18n="award1Title">Best Prize</h4>
+										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end" data-i18n="award1Meta">Chosun University | Jan. 2026</div>
 									</div>
 									<div class="item-content">
 										<ul class="resume-list" style="margin-top: -7px; margin-bottom: 20px;">
-											<li>8th AI ROBOTICS Convergence Idea Competition</li>
+											<li data-i18n="award1Desc">8th AI ROBOTICS Convergence Idea Competition</li>
 										</ul>
 									</div>
 								</div>
 
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0">Bronze Prize</h4>
-										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end">Hansung University | Feb. 2026</div>
+										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0" data-i18n="award2Title">Bronze Prize</h4>
+										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end" data-i18n="award2Meta">Hansung University | Feb. 2026</div>
 									</div>
 									<div class="item-content">
 										<ul class="resume-list" style="margin-top: -7px; margin-bottom: 20px;">
-											<li>Dual-arm Robot Physical AI Hackathon Competition</li>
+											<li data-i18n="award2Desc">Dual-arm Robot Physical AI Hackathon Competition</li>
 										</ul>
 									</div>
 								</div>
@@ -134,16 +147,16 @@
 
 							<!-- Projects -->
 							<section class="project-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Projects</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="secProjects">Projects</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0">PEFT-based Fine-tuning Research</h4>
-										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end">2026 – Present</div>
+										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0" data-i18n="proj1Title">PEFT-based Fine-tuning Research</h4>
+										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end" data-i18n="proj1Period">2026 – Present</div>
 									</div>
 									<div class="item-content">
-										<p class="mb-1">Research on Parameter-Efficient Fine-Tuning (PEFT) methods for large-scale language and vision models.</p>
+										<p class="mb-1" data-i18n="proj1Desc">Research on Parameter-Efficient Fine-Tuning (PEFT) methods for large-scale language and vision models.</p>
 										<ul class="resume-list">
-											<li>Status: <em>In Progress</em> — details to be updated</li>
+											<li data-i18n="proj1Status">Status: <em>In Progress</em> — details to be updated</li>
 										</ul>
 									</div>
 								</div>
@@ -151,17 +164,17 @@
 
 							<!-- Experience -->
 							<section class="work-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Experience</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="secExperience">Experience</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
 										<h4 class="item-title col-12 col-md-8 mb-2 mb-md-0">
-											<a href="https://www.chosun-cac.com/" target="_blank" style="color: inherit; text-decoration: none;">Chosun Algorithm Club (CAC)</a>
+											<a href="https://www.chosun-cac.com/" target="_blank" style="color: inherit; text-decoration: none;" data-i18n="exp1Title">Chosun Algorithm Club (CAC)</a>
 										</h4>
-										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end">Chosun University</div>
+										<div class="item-meta col-12 col-md-4 text-muted text-start text-md-end" data-i18n="exp1Meta">Chosun University</div>
 									</div>
 									<div class="item-content">
 										<ul class="resume-list" style="margin-top: -7px; margin-bottom: 20px;">
-											<li>Member of CHOSUN ALGORITHM CLUB — competitive programming and algorithm study</li>
+											<li data-i18n="exp1Desc">Member of CHOSUN ALGORITHM CLUB — competitive programming and algorithm study</li>
 										</ul>
 									</div>
 								</div>
@@ -169,26 +182,26 @@
 
 							<!-- Career Goal -->
 							<section class="skills-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Career Goal</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="secCareer">Career Goal</h3>
 								<div class="item">
 									<ul class="list-unstyled resume-skills-list">
-										<li class="mb-2"><i class="fas fa-chevron-right fa-xs me-2 text-muted"></i>Computer Vision Engineer</li>
-										<li class="mb-2"><i class="fas fa-chevron-right fa-xs me-2 text-muted"></i>Large Language Model Researcher</li>
-										<li class="mb-2"><i class="fas fa-chevron-right fa-xs me-2 text-muted"></i>Physical AI / Robotics Developer</li>
+										<li class="mb-2"><i class="fas fa-chevron-right fa-xs me-2 text-muted"></i><span data-i18n="goal1">Computer Vision Engineer</span></li>
+										<li class="mb-2"><i class="fas fa-chevron-right fa-xs me-2 text-muted"></i><span data-i18n="goal2">Large Language Model Researcher</span></li>
+										<li class="mb-2"><i class="fas fa-chevron-right fa-xs me-2 text-muted"></i><span data-i18n="goal3">Physical AI / Robotics Developer</span></li>
 									</ul>
 								</div>
 							</section>
 
 							<!-- Skills -->
 							<section class="skills-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Skills</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="secSkills">Skills</h3>
 								<div class="item">
 									<ul class="list-unstyled resume-skills-list">
-										<li class="mb-2"><span class="fw-500">Python</span> &nbsp;·&nbsp; <span class="text-muted">Advanced</span></li>
-										<li class="mb-2"><span class="fw-500">PyTorch</span> &nbsp;·&nbsp; <span class="text-muted">Intermediate</span></li>
-										<li class="mb-2"><span class="fw-500">Git</span> &nbsp;·&nbsp; <span class="text-muted">Intermediate</span></li>
-										<li class="mb-2"><span class="fw-500">AI Agent</span> &nbsp;·&nbsp; <span class="text-muted">Intermediate</span></li>
-										<li class="mb-2"><span class="fw-500">Linux</span> &nbsp;·&nbsp; <span class="text-muted">Basic (1 year)</span></li>
+										<li class="mb-2"><span class="fw-500">Python</span> &nbsp;·&nbsp; <span class="text-muted" data-i18n="lvlAdvanced">Advanced</span></li>
+										<li class="mb-2"><span class="fw-500">PyTorch</span> &nbsp;·&nbsp; <span class="text-muted" data-i18n="lvlIntermediate">Intermediate</span></li>
+										<li class="mb-2"><span class="fw-500">Git</span> &nbsp;·&nbsp; <span class="text-muted" data-i18n="lvlIntermediate">Intermediate</span></li>
+										<li class="mb-2"><span class="fw-500">AI Agent</span> &nbsp;·&nbsp; <span class="text-muted" data-i18n="lvlIntermediate">Intermediate</span></li>
+										<li class="mb-2"><span class="fw-500">Linux</span> &nbsp;·&nbsp; <span class="text-muted" data-i18n="lvlBasic1y">Basic (1 year)</span></li>
 									</ul>
 								</div>
 							</section>
@@ -203,5 +216,8 @@
 
 	<!-- Bootstrap 5 JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Language switch (KO / EN) -->
+	<script src="assets/js/i18n.js"></script>
 </body>
 </html>

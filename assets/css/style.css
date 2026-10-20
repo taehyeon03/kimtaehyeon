@@ -1,6 +1,6 @@
 /* ======= Base ======= */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
     color: #545454;
     background-color: #f5f5f5;
     font-size: 14px;
@@ -245,5 +245,257 @@ hr {
         border-top: 1px solid #e8e8e8;
         padding-top: 1rem;
         margin-top: 1rem;
+    }
+}
+
+/* ======= Korean typography ======= */
+html[lang="ko"] body {
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif;
+    word-break: keep-all;
+}
+
+html[lang="ko"] .resume-name {
+    letter-spacing: 0.15em;
+}
+
+/* ======= Top bar: language switch + PDF ======= */
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    background: rgba(245, 245, 245, 0.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.top-bar-inner {
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.lang-switch {
+    display: inline-flex;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    padding: 3px;
+}
+
+.lang-btn {
+    border: 0;
+    background: transparent;
+    color: #6c757d;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-btn:hover {
+    color: #2d2d2d;
+}
+
+.lang-btn.active {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.lang-btn:focus-visible,
+.pdf-btn:focus-visible {
+    outline: 2px solid #2d2d2d;
+    outline-offset: 2px;
+}
+
+.pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #2d2d2d;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    padding: 0.38rem 1rem;
+}
+
+.pdf-btn:hover {
+    color: #fff;
+    background: #2d2d2d;
+    border-color: #2d2d2d;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .top-bar-inner {
+        justify-content: space-between;
+    }
+    .lang-btn {
+        padding: 0.3rem 0.7rem;
+    }
+}
+
+/* ======= Print / PDF ======= */
+@page {
+    size: A4;
+    margin: 11mm 12mm;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body,
+    .main-wrapper {
+        background: #fff !important;
+    }
+
+    .container {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+
+    .resume-wrapper {
+        max-width: none;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .item,
+    .resume-section-heading {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .resume-section-heading {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+}
+
+/* Keep the two-column desktop layout on an A4 page (narrower than Bootstrap's md breakpoint) */
+@media print {
+    .resume-title {
+        flex: 0 0 auto;
+        width: 66.666%;
+    }
+
+    .resume-contact {
+        flex: 0 0 auto;
+        width: 33.333%;
+    }
+
+    .resume-intro .row > .col-12:first-child {
+        flex: 0 0 auto;
+        width: 18%;
+    }
+
+    .resume-profile-image {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 0 !important;
+    }
+
+    .item-heading .item-title.col-md-8 {
+        flex: 0 0 auto;
+        width: 66.666%;
+        margin-bottom: 0 !important;
+    }
+
+    .item-heading .item-meta {
+        flex: 0 0 auto;
+        width: 33.333%;
+        text-align: right !important;
+    }
+}
+
+/* Fit the CV on a single A4 page (most sizes are in rem, so shrink the root) */
+@media print {
+    html {
+        font-size: 13.5px;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    .resume-main {
+        padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    }
+
+    .resume-name {
+        font-size: 1.9rem;
+    }
+
+    .resume-contact .list-unstyled li {
+        margin-bottom: 0.2rem !important;
+    }
+
+    hr {
+        margin: 0.6rem 0;
+    }
+
+    .resume-intro {
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+    }
+
+    .resume-main section {
+        padding-top: 0.35rem !important;
+        padding-bottom: 0.35rem !important;
+    }
+
+    .resume-section-heading {
+        margin-bottom: 0.6rem !important;
+        padding-bottom: 0.35rem;
+    }
+
+    .item.mb-3 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .item-heading.mb-2 {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .resume-list[style] {
+        margin-top: 0 !important;
+        margin-bottom: 0.4rem !important;
+    }
+
+    .resume-skills-list li.mb-2 {
+        margin-bottom: 0.15rem !important;
+    }
+
+    .resume-skills-list p {
+        margin-bottom: 0.2rem;
+    }
+}
+
+/* In the PDF, put Career Goal and Skills side by side to save space */
+@media print {
+    .resume-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .resume-main > section {
+        grid-column: 1 / -1;
+    }
+
+    .resume-main > section.skills-section {
+        grid-column: auto;
     }
 }
