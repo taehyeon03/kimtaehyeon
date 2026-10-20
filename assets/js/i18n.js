@@ -14,7 +14,7 @@
 	var KO = {
 		pdfButton: 'PDF 다운로드',
 		name: '김태현',
-		tagline: '학부 연구생<br>조선대학교 인공지능공학과',
+		tagline: '조선대학교 인공지능공학과',
 		downloadCV: '이력서 다운로드',
 		location: '대한민국',
 		intro: '조선대학교 <b>인공지능공학과</b>에 재학 중인 학부생입니다. 주요 관심 연구 분야는 <b>인공지능</b>, <b>컴퓨터 비전</b>, <b>대규모 언어 모델(LLM)</b>, 그리고 <b>Vision-Language-Action(VLA) 모델</b>입니다.',
@@ -59,13 +59,13 @@
 
 	var META = {
 		en: {
-			title: 'TaeHyeon Kim | Undergraduate Researcher',
+			title: 'TaeHyeon Kim | Portfolio',
 			description: 'Portfolio of TaeHyeon Kim - Undergraduate in AI Engineering, Chosun University',
 			pdf: 'assets/files/CV_TaeHyeon_Kim.pdf',
 			pdfName: 'CV_TaeHyeon_Kim.pdf'
 		},
 		ko: {
-			title: '김태현 | 학부 연구생',
+			title: '김태현 | 포트폴리오',
 			description: '김태현 포트폴리오 - 조선대학교 인공지능공학과',
 			pdf: 'assets/files/CV_TaeHyeon_Kim_KO.pdf',
 			pdfName: '이력서_김태현.pdf'
