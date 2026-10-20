@@ -14,7 +14,7 @@
 	var KO = {
 		pdfButton: 'PDF 다운로드',
 		name: '김태현',
-		tagline: '조선대학교 인공지능공학과',
+		tagline: '학사 과정<br>조선대학교 인공지능공학과',
 		downloadCV: '이력서 다운로드',
 		location: '대한민국',
 		intro: '조선대학교 <b>인공지능공학과</b>에 재학 중인 학부생입니다. 주요 관심 연구 분야는 <b>인공지능</b>, <b>컴퓨터 비전</b>, <b>대규모 언어 모델(LLM)</b>, 그리고 <b>Vision-Language-Action(VLA) 모델</b>입니다.',
@@ -22,7 +22,7 @@
 		secEducation: '학력',
 		eduSchool: '조선대학교',
 		eduPeriod: '2022 – 현재',
-		eduDegree: '인공지능공학과 공학사 과정 &nbsp;·&nbsp; 3학년',
+		eduDegree: '인공지능공학과 학사 과정 &nbsp;·&nbsp; 3학년',
 		eduGpa: '평점 <b>4.0 이상</b> / 4.5 &nbsp;·&nbsp; 2학년 1·2학기 연속 학과 수석',
 		eduCoursework: '주요 이수 과목: 자연어처리, 딥러닝',
 
