@@ -343,7 +343,7 @@ html[lang="ko"] .resume-name {
 /* ======= Print / PDF ======= */
 @page {
     size: A4;
-    margin: 11mm 12mm;
+    margin: 10mm 12mm;
 }
 
 @media print {
@@ -423,7 +423,7 @@ html[lang="ko"] .resume-name {
 /* Fit the CV on a single A4 page (most sizes are in rem, so shrink the root) */
 @media print {
     html {
-        font-size: 13.5px;
+        font-size: 13px;
     }
 
     body {

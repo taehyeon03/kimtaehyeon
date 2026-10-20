@@ -23,6 +23,7 @@
 		eduSchool: '조선대학교',
 		eduPeriod: '2022 – 현재',
 		eduDegree: '인공지능공학과 공학사 과정 &nbsp;·&nbsp; 3학년',
+		eduGpa: '평점 <b>4.0 이상</b> / 4.5 &nbsp;·&nbsp; 2학년 1·2학기 연속 학과 수석',
 		eduCoursework: '주요 이수 과목: 자연어처리, 딥러닝',
 
 		secPublications: '논문',
@@ -42,6 +43,10 @@
 		proj1Status: '상태: <em>진행 중</em> — 세부 내용 추후 업데이트 예정',
 
 		secExperience: '활동',
+		exp2Title: '글로벌 버디 프로그램 — 멘토',
+		exp2Meta: '조선대학교 | 2026년 4월 – 5월',
+		exp2Desc: '외국인 유학생과 매주 교류하며 학업 및 한국 생활 적응 지원 (국제협력팀 주관)',
+
 		exp1Title: '조선대학교 알고리즘 동아리 (CAC)',
 		exp1Meta: '조선대학교',
 		exp1Desc: 'CHOSUN ALGORITHM CLUB 회원 — 경쟁 프로그래밍 및 알고리즘 스터디',
